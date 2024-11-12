@@ -1,19 +1,21 @@
+import logo from './logo.svg';
 import './App.css';
-import Approutes from './routes/Approutes';
-import { ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from './config/theme/ThemeProvider';
-
-
+import LoginPage from './Pages/LoginPage';
+import HomePage from './Pages/HomePage';
+import AppRoutes from './Routes/AppRoutes';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import NavBarComponent from './Components/NavigationBar';
 
 function App() {
   return (
-   <div>
-    <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Approutes/>
-    </ThemeProvider>
-   </div>
+    <div>
+      <AppRoutes/>
+      <ToastContainer />
+      
+
+     
+    </div>
   );
 }
 
