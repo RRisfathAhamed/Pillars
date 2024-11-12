@@ -5,7 +5,6 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CreateApplicationResponseDTO {
+public class UploadCVResponseDTO {
     private String message;
-    private Boolean isDuplicated;
 }

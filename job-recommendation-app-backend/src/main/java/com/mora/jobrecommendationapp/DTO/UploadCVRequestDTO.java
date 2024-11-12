@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CreateJobSeekerResponseDTO {
+public class UploadCVRequestDTO {
 
-    private String message;
-    private Boolean isDuplicated;
+    private Boolean is_cv_uploaded;
+
 }

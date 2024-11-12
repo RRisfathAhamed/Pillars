@@ -1,5 +1,6 @@
 package com.mora.jobrecommendationapp.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -48,6 +49,25 @@ public class JobSeeker {
     private String experience;
     @Column
     private String skills;
+    @Column
+    private Boolean isCvUploaded;
     @OneToMany(mappedBy = "jobSeeker", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore // Prevents serialization of the jobs list when JobProvider is serialized
     private List<Application> applications= new ArrayList<>();
+    @Lob
+    @Column(name = "cv_file")
+    private byte[] cvFile;
+
+    @Column(name = "cv_file_type")
+    private String cvFileType;
+
+    @Column(name = "cv_file_name")
+    private String cvFileName;
+
+    @Column
+    private String securityQuestion;
+
+    @Column
+    private String securityAnswerHash;
+
 }

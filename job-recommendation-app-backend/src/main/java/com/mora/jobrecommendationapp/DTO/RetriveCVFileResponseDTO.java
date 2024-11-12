@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CreateJobSeekerResponseDTO {
+public class RetriveCVFileResponseDTO {
 
-    private String message;
-    private Boolean isDuplicated;
+    private byte[] cvFile;
+    private String fileName;
 }

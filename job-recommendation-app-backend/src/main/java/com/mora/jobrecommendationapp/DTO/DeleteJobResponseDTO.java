@@ -5,7 +5,6 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CreateApplicationResponseDTO {
+public class DeleteJobResponseDTO {
     private String message;
-    private Boolean isDuplicated;
 }

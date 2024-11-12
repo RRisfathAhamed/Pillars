@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CreateJobSeekerResponseDTO {
+public class GetJobSeekerSkillsResponseDTO {
 
-    private String message;
-    private Boolean isDuplicated;
+    private long id;
+    private String skills;
 }

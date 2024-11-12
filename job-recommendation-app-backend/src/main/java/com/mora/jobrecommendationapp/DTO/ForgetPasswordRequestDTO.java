@@ -5,8 +5,8 @@ import lombok.Data;
 
 @Data
 @Builder
-public class CreateJobSeekerResponseDTO {
+public class ForgetPasswordRequestDTO {
 
-    private String message;
-    private Boolean isDuplicated;
+    private String userName;
+    private String emailAddress;
 }

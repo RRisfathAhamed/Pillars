@@ -1,25 +1,23 @@
 package com.mora.jobrecommendationapp.DTO;
 
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-public class CreateJobSeekerRequestDTO {
+public class GetJobSeekerByIDResponseDTO {
 
     private String firstName;
     private String lastName;
-    private String userName;
     private String email;
-    private String password;
     private String phoneNumber;
     private String address;
     private String dob;
     private String gender;
     private String registeredDate;
+    private String userName;
+    private String education;
+    private String experience;
+    private String skills;
     private Boolean isCvUploaded;
-    private String securityQuestion;
-    private String securityAnswer;
 }
